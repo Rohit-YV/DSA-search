@@ -1,0 +1,28 @@
+class Solution {
+    public int findNumbers(int[] nums) {
+        int count =0;
+        for(int num : nums){
+            if(even(num)){
+                count++;
+            }
+        }
+        return count;
+    }
+    
+    boolean even(int num){
+        int find_the_number = digit(num);
+        if(find_the_number %2 == 0){
+            return true;
+        }
+        return false;
+
+    }
+    int digit(int nums){
+        int count = 0;
+        while(nums > 0){
+            count++;
+            nums =nums /10;
+        }
+        return count;
+    }
+}
